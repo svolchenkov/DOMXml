@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>chooseXMLFile</title>
+    </h:head>
+    <h:body>
+        <view>
+            <a></a>
+            <h:form enctype="multipart/form-data">  
+                <h:inputFile value="#{indexBean.fileXml}">
+                </h:inputFile>
+                <p></p>
+                <h3 style="color: darkmagenta" >
+                    <h:outputText value="#{indexBean.messageUploadFile}" />
+                </h3>
+                <p></p>
+                <h:commandButton value="Upload file" action="#{indexBean.uploadFile()}"  />
+            </h:form>
+            <p></p>
+            <h:form>
+                <p></p>
+            </h:form>
+            <h:form>
+                <h:commandButton value="get root element from document" action="#{indexBean.receiveRootElement()}" />
+                <h:outputText value="  #{indexBean.rootElement}" />
+            </h:form>
+            <p></p>
+            <h:form>
+                <h:commandButton value="get next element " action="#{indexBean.receiveElement()}" />
+                <h:outputText value="  #{indexBean.studentElement}" />
+            </h:form>
+            <p></p>
+            <h:form>
+                <h:commandButton value="createXML" action="#{createDOMXmlBean.createDOMXml()}" />
+            </h:form>
+            <h:form>
+                
+            </h:form>
+        </view>
+    </h:body>
+</html>
+
